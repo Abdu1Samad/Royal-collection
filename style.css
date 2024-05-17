@@ -1,0 +1,621 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: rgb(245, 243, 243) !important;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    position:absolute;
+    background: transparent;
+    z-index: 9999;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.nav-logo {
+    position: relative;
+    bottom: 9px;
+}
+
+
+.nav-logo label a{
+    color: white;
+    font-size:30px;
+    font-weight: bold;
+}
+
+ .logo-span{
+    height: 50px;
+    width: 50px; 
+    font-size: 20px;
+    position: relative;
+} 
+
+.logo-span::before{
+    content: "";
+    width: 10px;
+    height: 30%;
+    position: absolute;
+    top: 55%;
+    left: 5px;
+    border-radius: 10%;
+    background-color: red;
+    color:transparent;
+}
+
+.nav-logo a{
+    text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    gap: 3rem;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;    
+}
+
+nav ul li  a:hover{
+    color: red;
+}
+
+.nav-icon{
+    color: white;
+    font-size: 20px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position:relative;
+}
+
+.nav-icon span:hover{
+    color: red;
+}
+
+.menu-btn{
+    color: white;
+    font-size: 35px;
+    display: none;
+    position: relative;
+    margin-top: -8px;
+}
+
+#close-icon{
+    display: none;
+}
+
+.nav-overlay{
+    position: absolute;
+
+}
+
+
+/* Navbar-responsive */
+
+@media(max-width:992px){
+
+    nav ul{
+      gap: 2rem;
+    }
+
+}
+
+@media(max-width:850px){
+
+    nav ul{
+        gap: 2vw;
+      }
+
+}
+@media(max-width:768px){
+
+    .nav{
+        position: relative;
+    }
+
+    nav ul{
+        display: none;
+        position: relative;
+        z-index: 100;
+        margin-top: 25%;
+        line-height: 100px;
+        margin-left: -15%;
+    }
+
+    nav ul li{
+        font-size: 45px ;
+        font-weight: 700;
+    }
+
+    .nav-icon{
+        display: none;
+    }
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .nav-overlay{
+        position:absolute;
+        width: 100%;
+        height:100%;
+        position: fixed;
+       /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.51);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.31); 
+        top: 0;
+        left: 0;
+        display: none;
+    } 
+
+    .nav-overlay::-webkit-scrollbar{
+        display: none;
+    }
+
+    .nav-overlay:active .menu-icon{
+        display: block;
+    }
+}
+
+@media(max-width:500px){
+
+    nav ul{
+        margin-left: -25%;
+        
+    }
+
+    nav ul li{
+        font-size: 35px;
+    }
+
+}
+
+@media(max-width:400px){
+
+    nav ul{
+        margin-left: -35%;
+    }
+
+    nav ul li{
+        font-size: 35px;
+    }
+
+    .nav-logo label a{
+        font-size:25px ;
+    }
+
+}
+
+
+@media(max-width:300px){
+
+    nav ul{
+        margin-left: -45%;
+    }
+
+
+}
+
+/* searchbox  */
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    z-index: 10000;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.400);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    /* border: 1px solid rgb(255, 255, 255); */
+    top: 0;
+    left: 0;
+    display: none;
+    overflow-y: hidden;
+}
+
+
+.overlay.active{
+    display: flex;
+}
+
+.overlay-font i{
+    color: white;
+    font-size: 3vw;
+    position: absolute;
+    top: 30px;
+    left: 85%;
+}
+
+.overlay-para{
+    color:white;
+    font-size: 3vw;
+    position: relative;
+    top: 35%;
+    left: 32%;
+    font-family: "Encode Sans",;
+}
+
+.overlay .searchbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay .searchbox input{
+    width: 80%;
+    padding: 30px;
+    height: 10px;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    position: absolute;
+    left: 10%;
+    top: 55%;
+}
+
+.overlay-button{
+    position: absolute;
+    top: 80%;   
+    left: 42%;
+}
+
+.overlay-button input{
+    height: 50px;
+    width: 15vw;
+    outline: none;
+    font-size: 18px;
+    border: none;
+    background-color: white;
+    color: black;
+    transition: all ease 0.3s;
+    position: absolute;
+    bottom: 10%;
+    border-radius: 8px;
+}
+
+.overlay-button input:hover{
+    transform: translateY(-10px);
+    color:white;
+    background-color:red;
+}
+
+
+/* searchbox responsive  */
+
+@media(max-width:992px){
+
+    .overlay .searchbox input{
+        top: 50%;
+    }
+    
+    .overlay-button{
+        top: 70%;   
+    }
+}
+
+@media (max-width:768px){
+
+    .overlay-button input{
+        width: 25vw;
+        position: relative;
+        right: 20%;
+    }
+
+    .overlay-para p{
+        font-size: 4vw;
+        position: relative;
+        right: 15%;
+    }
+
+    .overlay{
+        overflow: hidden;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .overlay-para p{
+        font-size: 5.5vw;
+        position: relative;
+        right: 22%;
+    }
+
+    .overlay .searchbox input{
+        top: 48%;
+    }
+}
+
+/* Carousel  */
+
+.carousel-inner{
+    height: 100vh;
+    /* position: relative; */
+}
+
+.carousel-item{
+    /* filter: brightness(50%); */
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carousel-content  */
+
+.carousel-content{
+    position:relative !important;
+    color: white;
+    top: 30%;
+    left: 30%;
+}
+
+.carousel-content h1{
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.carousel-content .label-1{
+    font-size: 5.6vw;
+    text-align: center;
+    line-height: 80px;
+    font-family: "Encode Sans",;
+    font-weight: 500;
+}
+
+.carousel-content .label-2{
+    font-size: 2.7vw;
+    text-align: center;
+    line-height: 70px;
+    font-weight: 600;
+}
+
+.carousel-content .label-2 span{
+    color: red;
+}
+
+.carousel-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-content button{
+    width:150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    margin-top: 16px;
+    background-color: white;
+    transition: all ease 0.3s;
+}
+
+.carousel-content button i{
+    font-size: 14px;
+}
+
+.carousel-content button:hover{
+    transform: translateY(-10px);
+    background-color: red;
+    color: white;
+}
+
+/* carousel Responsive  */
+
+@media(max-width:992px){
+
+
+    .carousel-content{
+        top: 20vh;
+        left: 8%;
+    }
+    
+    .carousel-content .label-1{
+        font-size: 7vw;
+    }
+    
+    .carousel-content .label-2{
+        font-size: 3.5vw;
+        text-align: center;
+        line-height: 70px;
+        font-weight: 600;
+    }
+
+    .carousel-content button{
+        width:150px;
+        height: 45px;
+        border: none;
+        outline: none;
+        margin-top: 16px;
+        background-color: white;
+        transition: all ease 0.3s;
+        font-size: 16px;
+    }
+}
+@media(max-width:800px){
+.carousel-content{
+    top: 13vh;
+    left: 8%;
+}
+}
+
+@media(max-width:768px){
+
+    .carousel-content{
+        top: 13vh;
+        left: 8%;
+    }
+
+    .carousel-content .label-1{
+        line-height: 8vh;
+    }
+    
+    .carousel-content .label-2{
+        font-size: 3.5vw;
+        text-align: center;
+        line-height: 7vh;
+        font-weight: 600;
+    }
+
+    .carousel-content button{
+        width:20vw;
+        height: 5vh;
+        margin-top: 1vh;
+    }
+}
+
+@media (max-width:600px){
+
+    .carousel-content{
+        top: 11vh;
+        left: 8%;
+    }
+
+    .carousel-content .label-1{
+        line-height: 5.5vh;
+    }
+    
+    .carousel-content .label-2{
+        font-size: 3.5vw;
+        text-align: center;
+        line-height:5vh;
+        font-weight: 600;
+    }
+
+    .carousel-content button{
+        width: 20vw;
+        height: 5vh;
+        margin-top: 1.5vh;
+        font-size: 2.5vw;
+    }
+
+    .carousel-content h1{
+        display: none;
+    }
+
+}
+
+@media (max-width:470px){
+
+    .carousel-content{
+        top: 10vh;
+        left: 8%;
+    }
+
+    .carousel-content .label-1{
+        line-height: 5vh;
+        font-size: 8vw;
+    }
+
+    .carousel-content .label-2{
+        font-size: 4vw;
+        line-height: 5vh;
+    }
+
+    .carousel-content button{
+        width: 24vw;
+        height: 5vh;
+        margin-top: 1.5vh;
+        font-size: 3vw;
+        margin-bottom: 1%;
+    }
+
+}
+
+
+/* home main content  */
+
+.home-boxes-parent{
+    position: relative;    
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 8%;
+    margin-bottom: 4%;
+}
+
+.home-box1{
+    width: 27vw;
+    height: 34vh;
+   
+}
+
+.home-box2{
+    width: 27vw;
+    height: 34vh;
+}
+
+.home-box3{
+    width: 27vw;
+    height: 34vh;
+}
+
+.home-boxes-parent img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+
+.home-boxes-parent img:hover{
+    filter: contrast(30%);
+}
+
+.home-box1 , .home-box2 , .home-box3{
+    position: relative;
+    font-size: 20px;
+}
+
+#l-1{
+    position: absolute;
+    left: 31%;
+    background-color: white;
+    padding: 12px 40px;
+    top: 50%;
+    
+}
+
+#l-2{
+    position: absolute;
+    left: 31%;
+    background-color: white;
+    padding: 12px 35px;
+    top: 50%;
+}
+
+#l-3{
+    position: absolute;
+    left: 37%;
+    background-color: white;
+    padding: 12px 40px;
+    top: 50%;
+}
+
+/* boxes responsive  */
+
+
+
