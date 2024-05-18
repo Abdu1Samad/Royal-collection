@@ -5,10 +5,11 @@
 }
 
 body{
-    position: relative;
+    /* position: relative; */
 }
 
 nav{
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +18,9 @@ nav{
     width: 100%;
     position: absolute;
     background-color: royalblue;
+}
+header{
+    /* position: relative; */
 }
 
 .navigation{
@@ -40,28 +44,74 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: black;
-    font-size: 1.3vw;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
 nav .logo a{
     text-decoration: none;
-    font-size: 1.6vw;
+    font-size: 1.3rem;
     color: black;
     font-weight: 600;
+}
+
+nav .logo a span{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 2px;
+    background-color: black;
+    display: inline-block;
 }
 
 .nav-icons{
     display: flex;
     gap: 1vw;
-    font-size: 1.4vw;
+    font-size: 1rem;
     cursor: pointer;
+}
+.menu{
+    display: none;
+    }
+
+
+/* Responsive nav */
+
+@media(max-width:768px) {
+    .menu{
+        display: block;
+        right: 10vw;
+        position: absolute;
+        scale: 1.6;
+    }
+.nav-icons{
+    gap: 1.3vw;
+    position: absolute;
+    right: 17vw;
+}
+
+
+nav ul {
+    
+   display: none;
+}
+.logo {
+  font-size: 2vw;
 }
 
 
 
+}
 
 
+@media (max-width: 420px) {
+.menu {
+    
+}
+
+}
+
+    
+   
 
 
 
