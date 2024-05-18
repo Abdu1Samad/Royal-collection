@@ -104,9 +104,13 @@ nav ul {
 
 
 @media (max-width: 420px) {
-.menu {
-    
+nav {
+    padding: 0 30px;
 }
+.nav-icons {
+    right: 20vw;
+}
+
 
 }
 
