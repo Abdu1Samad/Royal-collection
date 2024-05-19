@@ -1,123 +1,287 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    /* position: relative; */
-}
-
-nav{
-    
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 80px;
     padding: 0 50px;
     width: 100%;
     position: absolute;
-    background-color: royalblue;
-}
-header{
-    /* position: relative; */
+    z-index: 100;
 }
 
-.navigation{
+.navigation {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-nav ul{
+
+nav .logo a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+}
+
+nav .logo a span {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 1px;
+    background-color: red;
+    display: inline-block;
+}
+
+nav ul {
     display: flex;
     gap: 4vw;
     justify-content: center;
     margin: 0;
     padding: 0;
+    font-weight: 600;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
-
-nav .logo a{
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: black;
-    font-weight: 600;
-}
-
-nav .logo a span{
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 2px;
-    background-color: black;
-    display: inline-block;
-}
-
-.nav-icons{
+.nav-icons {
     display: flex;
     gap: 1vw;
     font-size: 1rem;
     cursor: pointer;
+    color: white;
 }
-.menu{
-    display: none;
-    }
 
+.menu {
+    display: none;
+    color: white;
+}
 
 /* Responsive nav */
 
 @media(max-width:768px) {
-    .menu{
+
+    .menu {
         display: block;
         right: 10vw;
         position: absolute;
         scale: 1.6;
     }
-.nav-icons{
-    gap: 1.3vw;
-    position: absolute;
-    right: 17vw;
-}
 
+    .nav-icons {
+        gap: 2vw;
+        position: absolute;
+        right: 17vw;
+    }
 
-nav ul {
-    
-   display: none;
-}
-.logo {
-  font-size: 2vw;
-}
+    nav ul {
+        display: none;
+    }
 
-
+    .logo a {
+        font-size: 2vw;
+    }
 
 }
-
 
 @media (max-width: 420px) {
-nav {
+
+    nav {
+        padding: 0 30px;
+    }
+
+    .nav-icons {
+        right: 20vw;
+    }
+
+}
+
+@media(max-width:350px) {
+
+    .logo label a {
+        font-size: 18px;
+    }
+
+}
+
+/* search-overlay  */
+
+.search-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 120;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.overlay-font {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+.overlay-font i {
+    color: white;
+    font-size: 40px;
+}
+
+.overlay-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.overlay-label label{
+    font-family: "Poppins",sans-serif;
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 500;
+}
+
+.overlay-searchbox input{
+    width: 80vw;
+    height: 8vh;
+    border:none ;
+    outline: none;
+    border-radius: 8px;
+    font-size: 1.4rem;
     padding: 0 30px;
-}
-.nav-icons {
-    right: 20vw;
+    margin-top:8vh ;
 }
 
+.overlay-btn{
+    margin-top: 8vh;
+}
+
+.overlay-btn input{
+    width: 15vw;
+    height: 9vh;
+    font-size: 18px;
+    font-weight: 600;
+    color: #605353;    
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    transition: all ease 0.5s;
+}
+
+.overlay-btn input:hover{
+    background-color: red;
+    color: white;
+    transform: translateY(-10px);
+}
+
+
+/* Search overlay Responsive */
+
+@media (max-width:992px){
+    .overlay-label label{
+        font-size: 2.8rem;
+    }
+
+    .overlay-btn input{
+        width: 18vw;
+    }
+}
+
+@media (max-width:768px){
+    .overlay-btn input{
+        width: 20vw;
+    }
 
 }
 
-    
-   
+@media (max-width:700px){
+    .overlay-label label{
+        font-size: 6vw;
+    }
 
+    .overlay-font{
+        right: 25px;
+    }
+
+    .overlay-font i{
+        font-size: 30px;
+    }
+
+    .overlay-btn input{
+        width: 25vw;
+    }
+}
+
+@media (max-width:500px){
+    .overlay-btn input{
+        width: 28vw;
+    }
+}
+
+@media (max-width:400px){
+    .overlay-btn input{
+        width: 30vw;
+    }
+
+    .overlay-searchbox input{
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Carousel */
+
+
+.carousel {
+    position: relative;
+}
+
+.carousel-item {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg");
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
 
 
 
@@ -199,4 +363,3 @@ nav {
 } */
 
 /* boxes responsive  */
-
