@@ -24,7 +24,7 @@ nav {
 
 nav .logo a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: white;
     font-weight: 600;
 }
@@ -53,16 +53,24 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
+}
+
+nav ul li a:hover{
+    color: red;
 }
 
 .nav-icons {
     display: flex;
     gap: 1vw;
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
     color: white;
+}
+
+.nav-icons:hover{
+    color: red;
 }
 
 .menu {
@@ -71,6 +79,12 @@ nav ul li a {
 }
 
 /* Responsive nav */
+
+@media (max-width:800px){
+    nav ul{
+        gap: 3vw;
+    }
+}
 
 @media(max-width:768px) {
 
@@ -109,7 +123,7 @@ nav ul li a {
 
 }
 
-@media(max-width:350px) {
+@media(max-width:380px) {
 
     .logo label a {
         font-size: 18px;
@@ -124,7 +138,7 @@ nav ul li a {
     width: 100%;
     height: 100vh;
     z-index: 120;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -132,7 +146,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    visibility: hidden;
 }
 
 .overlay-font {
@@ -280,8 +294,142 @@ nav ul li a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
+
+.carousel-1-items{
+    color: white;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width:100%;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+    top: 6%;
+    right: 20vw;
+}
+
+.carousel-1-label-1 label{
+    font-size: 1.1rem;
+}
+
+.carousel-label-2 label{
+    font-size: 4rem;
+    text-align: center;
+    line-height: 13vh;
+    font-family: "Poppins",sans-serif;
+}
+
+.carousel-1-label-3 label{
+    font-family:"Poppins",sans-serif;
+    font-size: 1.9rem;
+    line-height: 12vh;
+}
+
+.carousel-1-label-3 label span{
+    color: red;
+}
+
+.carousel-1-btn input{
+    width: 12vw;
+    height: 9vh;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    outline:none ;
+    transition: all ease 0.3s;
+    margin-top: 2vh;
+}
+
+.carousel-1-btn input:hover{
+    background-color: red;
+    color: white;
+    transform: translateY(-10px);
+}
+
+ @media only screen and (max-width: 1100px){
+
+    .carousel-item{
+        height: 450px; 
+        /* ye isko height di hai kyunke jab overlay khulta hai to carousel ki height zyada thi aur scroll krne pr neechy blur ni horha tha, neechy ka hissa dikh rha tha :) */
+    }
+
+    .carousel-label-2 label{
+        line-height: 80px;
+    }
+
+    .carousel-1-label-3 label{
+        line-height: 35px;
+    }
+
+    .carousel-1-btn input{
+        width: 15vw;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .carousel-label-2 label{
+        font-size: 3.5rem;
+    }
+
+    .carousel-1-btn input{
+        width: 150px;
+    }
+
+}
+
+@media(max-width:768px){
+    .carousel-1-items{
+        left: -15vw;
+    }
+}
+
+@media(max-width:600px){
+
+    .carousel-1-items{
+        left: -10vw;
+    }
+
+    .carousel-label-2 label{
+        font-size: 3rem;
+        line-height: 65px;
+    }
+
+}
+
+@media (max-width:450px){
+
+    .carousel-label-2 label{
+        font-size: 2.5rem;
+        line-height: 60px;
+    }
+
+    .carousel-1-label-3 label{
+        font-size: 1.6rem;
+        left: -7vw;
+    }
+
+    .carousel-1-btn input{
+        width: 120px;
+        height: 6vh;
+    }
+
+}
+
+@media (max-width:450px){
+    
+    .carousel-1-items{
+        left: -12px;
+    }
+
+}
+
 
 
 
