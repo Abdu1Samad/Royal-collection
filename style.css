@@ -145,13 +145,18 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     visibility: hidden;
+=======
+    visibility: hidden; /*yahan display none ki jagah visibility hidden rakha hai kyunki display flex use kia hai to dubara display property use krenge to purani wali ko overwrite krdegi*/
+>>>>>>> 062cb7c64500c307e646cec745788b2b275d8538
 }
 
 .overlay-font {
     position: absolute;
     right: 50px;
     top: 20px;
+    cursor: pointer;
 }
 
 .overlay-font i {
@@ -530,9 +535,12 @@ nav ul li a:hover{
 
 
 
-
-
-
+@media only screen and (max-width: 1100px){
+    .carousel-item{
+        height: 450px; 
+        /* ye isko height di hai kyunke jab overlay khulta hai to carousel ki height zyada thi aur scroll krne pr neechy blur ni horha tha, neechy ka hissa dikh rha tha :) */
+    }
+}
 
 
 
