@@ -26,13 +26,12 @@ nav .logo a {
     text-decoration: none;
     font-size: 1.5rem;
     color: white;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 nav .logo a span {
     width: 0.5rem;
     height: 0.5rem;
-    border-radius: 1px;
     background-color: red;
     display: inline-block;
 }
@@ -75,7 +74,7 @@ nav ul li a:hover{
 
 .menu {
     display: none;
-    color: white;
+    color:white;
 }
 
 /* Responsive nav */
@@ -283,23 +282,21 @@ nav ul li a:hover{
 
 /* Carousel */
 
-
 .carousel {
     position: relative;
 }
-
 .carousel-item {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.vecteezy.com/system/resources/previews/011/911/023/non_2x/full-street-fashion-slender-figure-beautiful-face-graceful-girl-sitting-on-isolated-white-background-portrait-of-female-model-in-studio-plastic-surgery-and-aesthetic-cosmetology-free-photo.jpg");
     height: 600px;
-    background-position: center;
+    background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
 
 }
-
 .carousel-1-items{
     color: white;
     display: flex;
@@ -312,28 +309,25 @@ nav ul li a:hover{
     top: 6%;
     right: 20vw;
 }
-
 .carousel-1-label-1 label{
     font-size: 1.1rem;
+    font-weight: 600;
 }
-
 .carousel-label-2 label{
     font-size: 4rem;
     text-align: center;
     line-height: 13vh;
     font-family: "Poppins",sans-serif;
 }
-
 .carousel-1-label-3 label{
     font-family:"Poppins",sans-serif;
     font-size: 1.9rem;
     line-height: 12vh;
 }
-
 .carousel-1-label-3 label span{
     color: red;
+    font-weight: 600;
 }
-
 .carousel-1-btn input{
     width: 12vw;
     height: 9vh;
@@ -342,13 +336,29 @@ nav ul li a:hover{
     border: none;
     outline:none ;
     transition: all ease 0.3s;
-    margin-top: 2vh;
+    margin-top: 1.vh;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+.carousel-1-btn input:hover{
+    background-color:white;
+    color: black;
+    transform: translateY(-10px);
+    border: none;
 }
 
-.carousel-1-btn input:hover{
-    background-color: red;
-    color: white;
-    transform: translateY(-10px);
+@media only screen and (max-width: 1300px){
+
+    .carousel-1-label-3 label{
+        line-height: 35px;
+    }
+
+    .carousel-label-2 label{
+        line-height: 80px;
+    }
+
 }
 
  @media only screen and (max-width: 1100px){
@@ -429,6 +439,95 @@ nav ul li a:hover{
     }
 
 }
+
+/* Carousel item 2 */
+
+.carousel-2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),url("https://demoxml.com/html/wooland/wooland/images/slider-bg-1.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.carousel-item-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+    color:white;
+}
+.carousel-2-label-1 label{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.carousel-2-para p{
+    font-size: 1.3rem;
+    text-align: justify;
+    margin-top: 4vh;
+    line-height: 6vh;
+}
+.carousel-2-btn input{
+    width: 170px;
+    height: 50px;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all ease 0.3s;
+    margin-top: 3vh;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+.carousel-2-btn input:hover{
+    background-color: white;
+    color: black;
+    transform:  translateY(-10px);
+    border: none;
+}
+
+/* Responsive_carousel_2 */
+@media(max-width:1100px){
+    .carousel-item-2{
+        top: 25vh;
+    }
+}
+@media(max-width:600px){
+    .carousel-item-2{
+        left: 5vw;
+    }
+    .carousel-2-para p{
+        font-size: 1rem;    
+    }
+}
+@media(max-width:420px){
+    .carousel-item-2{
+        left: 5vw;
+    }
+    .carousel-2-para p{
+        font-size: 0.8rem;    
+    }
+    .carousel-2-btn input{
+        width: 150px;
+        margin-top: 1vh;
+    }
+}
+@media(max-width:350px){
+    .carousel-2-para p{
+        font-size: 0.7rem;    
+    }
+    .carousel-2-btn input{
+        width: 130px;
+    }
+}
+
+
+
 
 
 
