@@ -364,10 +364,9 @@ nav ul li a:hover{
 
 @media only screen and (max-width: 1100px){
 
-    .carousel-item{
+    /* .carousel-item{
         height: 450px; 
-        /* ye isko height di hai kyunke jab overlay khulta hai to carousel ki height zyada thi aur scroll krne pr neechy blur ni horha tha, neechy ka hissa dikh rha tha :) */
-    }
+    } */
 
     .carousel-label-2 label{
         line-height: 80px;
@@ -501,18 +500,28 @@ nav ul li a:hover{
 }
 
 @media only screen and (max-width: 992px){
+    
     .carousel-item-2{
         left: 5vw;
     }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 768px){
+    .carousel-item-2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        /* border: 2px solid yellow; */
+        width: 100%;
+    }
     .carousel-2-para p{
         font-size: 1rem;
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px){  
+    
     .carousel-2-para p{
         font-size: 0.8rem;
     }
