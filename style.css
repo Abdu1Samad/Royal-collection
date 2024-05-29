@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+   background:whitesmoke !important;
 
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -25,7 +28,7 @@ nav {
 nav .logo a {
     text-decoration: none;
     font-size: 1.5rem;
-    color: white;
+    color: black;
     font-weight: 700;
 }
 
@@ -51,7 +54,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -65,7 +68,7 @@ nav ul li a:hover{
     gap: 1vw;
     font-size: 1.2rem;
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 .nav-icons:hover{
@@ -74,7 +77,7 @@ nav ul li a:hover{
 
 .menu {
     display: none;
-    color:white;
+    color:black;
 }
 
 /* Responsive nav */
@@ -287,7 +290,7 @@ nav ul li a:hover{
     position: relative;
 }
 .carousel-item {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.vecteezy.com/system/resources/previews/011/911/023/non_2x/full-street-fashion-slender-figure-beautiful-face-graceful-girl-sitting-on-isolated-white-background-portrait-of-female-model-in-studio-plastic-surgery-and-aesthetic-cosmetology-free-photo.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://demo.fieldthemes.com/loki/home2/modules/fieldslideshow/images/slider3-774.jpg");
     height: 600px;
     background-position:center;
     background-repeat: no-repeat;
@@ -295,8 +298,6 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-attachment: fixed;
-
 }
 .carousel-1-items{
     color: white;
@@ -337,17 +338,20 @@ nav ul li a:hover{
     border: none;
     outline:none ;
     transition: all ease 0.3s;
-    margin-top: 1.vh;
+    margin-top: 2vh;
     border-radius: 4px;
     background-color: transparent;
     border: 2px solid white;
     color: white;
 }
 .carousel-1-btn input:hover{
-    background-color:white;
-    color: black;
+    background-color:red;
+    color: white;
     transform: translateY(-10px);
     border: none;
+}
+.dark-carousel:active .navigation ul li a{
+    color: white;
 }
 
 @media only screen and (max-width: 1300px){
@@ -355,43 +359,34 @@ nav ul li a:hover{
     .carousel-1-label-3 label{
         line-height: 35px;
     }
-
     .carousel-label-2 label{
         line-height: 80px;
     }
-
+    .carousel-1-btn input{
+        height: 6vh;
+    }
 }
 
 @media only screen and (max-width: 1100px){
 
-    /* .carousel-item{
-        height: 450px; 
-    } */
-
     .carousel-label-2 label{
         line-height: 80px;
     }
-
     .carousel-1-label-3 label{
         line-height: 35px;
     }
-
     .carousel-1-btn input{
         width: 15vw;
     }
-
 }
 
 @media(max-width:992px){
-
     .carousel-label-2 label{
         font-size: 3.5rem;
     }
-
     .carousel-1-btn input{
         width: 150px;
     }
-
 }
 
 @media(max-width:768px){
@@ -401,49 +396,40 @@ nav ul li a:hover{
 }
 
 @media(max-width:600px){
-
     .carousel-1-items{
         left: -10vw;
     }
-
     .carousel-label-2 label{
         font-size: 3rem;
         line-height: 65px;
     }
-
 }
 
 @media (max-width:450px){
-
     .carousel-label-2 label{
         font-size: 2.5rem;
         line-height: 60px;
     }
-
     .carousel-1-label-3 label{
         font-size: 1.6rem;
         left: -7vw;
     }
-
     .carousel-1-btn input{
         width: 120px;
         height: 6vh;
     }
-
 }
 
 @media (max-width:450px){
-    
     .carousel-1-items{
         left: -12px;
     }
-
 }
 
 /* Carousel item 2 */
 
 .carousel-2{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),url("https://demoxml.com/html/wooland/wooland/images/slider-bg-1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),url("https://demoxml.com/html/wooland/wooland/images/slider-bg-1.jpg");
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;    
@@ -454,23 +440,25 @@ nav ul li a:hover{
 }
 .carousel-item-2{
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 40vh;
     left: 10vw;
-    color:white;
+    color:black;
+    background-size:cover ;
+    height: 100%;
 }
 .carousel-2-label-1 label{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 900;
 }
 .carousel-2-para p{
     font-size: 1.3rem;
     text-align: justify;
     margin-top: 4vh;
-    line-height: 6vh;
+    line-height: 5.5vh;
+    font-weight: 600;
 }
 .carousel-2-btn input{
     width: 170px;
@@ -479,28 +467,40 @@ nav ul li a:hover{
     font-size: 1.2rem;
     font-weight: 600;
     transition: all ease 0.3s;
-    margin-top: 3vh;
+    margin-top: 2vh;
     background-color: transparent;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid black;
+    color: black;
+    border-radius:4px;
 }
 .carousel-2-btn input:hover{
-    background-color: white;
-    color: black;
+    background-color: red;
+    color: white;
     transform:  translateY(-10px);
     border: none;
 }
 
 /* Responsive_carousel_2 */
 
+@media only screen and (max-width: 1500px){
+    .carousel-2-label-1 label{
+        position: relative;
+        top: 20px;
+    }
+}
 @media only screen and (max-width: 1100px){
     .carousel-item-2{
-        top: 30vh;
+        height: 100%;
+    }
+    .carousel-2-para p{
+        line-height: 3vh;
+    }
+    .carousel-2-btn input{
+        margin-top: 2vh;
     }
 }
 
 @media only screen and (max-width: 992px){
-    
     .carousel-item-2{
         left: 5vw;
     }
@@ -512,18 +512,17 @@ nav ul li a:hover{
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        /* border: 2px solid yellow; */
         width: 100%;
     }
     .carousel-2-para p{
-        font-size: 1rem;
+        font-size: 1.2rem;
+        line-height: 3vh;
     }
 }
 
-@media only screen and (max-width: 500px){  
-    
+@media only screen and (max-width: 500px){      
     .carousel-2-para p{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     .carousel-2-btn input{
         width: 130px;
@@ -531,11 +530,113 @@ nav ul li a:hover{
     }
 }
 
-@media only screen and (max-width: 350px){
+@media only screen and (max-width: 400px){
     .carousel-2-para p{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 }
+
+ /* carousel-3  */
+
+    .carousel-3{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),url("images/carousel-3.jpg"); 
+        background-position:center top;       
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .carousel-item-3{
+        display: flex;
+        flex-direction:column ;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        float:right;
+        color: black;
+        position: relative;
+        right: 10%;
+        margin-top: 20px;
+    }
+    .carousel-3-label-1 label{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .carousel-3-label-2 label{
+        font-size: 4rem;
+        font-family:"Poppins",sans-serif;
+        font-weight: 800;
+    }
+    .carousel-3-para p{
+        text-align: justify;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .carousel-3-btn input{
+        color: black;
+        text-decoration: none;
+        border: 2px solid black;
+        background-color: transparent;
+        width: 150px;
+        height: 50px;
+        margin-top: 2vh;
+        transition: all ease 0.5s;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    .carousel-3-btn input:hover{
+        background-color: red;
+        color: white;
+        transform: translateY(-10px);
+        border: none;
+    }
+
+    /* Carousel-3-Respoonsive */
+
+    @media only screen and (max-width: 1200px){
+        .carousel-item-3{
+            right: 5%;
+        }
+        .carousel-3-label-2 label{
+            font-size: 3rem;
+        }   
+    }
+    @media only screen and (max-width: 900px){
+        .carousel-3-label-2 label{
+            font-size: 2.5rem;
+        }   
+        .carousel-3-para p{
+            font-size: 1rem;
+        }
+    }
+    @media only screen and (max-width: 700px){
+        .carousel-3-label-2 label{
+            font-size: 2rem;
+        }   
+        .carousel-3-para p{
+            font-size: 0.8rem;
+        }
+        .carousel-item-3{
+            margin-top: 30px;
+        }
+    }
+    @media only screen and (max-width: 400px){   
+        .carousel-3-para p{
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        .carousel-3-btn input{
+            width: 130px;
+        }
+    }
+
+
+
+
 
 
 
@@ -548,70 +649,102 @@ nav ul li a:hover{
 
 /* home main content  */
 
-/* .home-boxes-parent{
+.home-boxes-parent{
     position: relative;    
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 8%;
-    margin-bottom: 4%;
+    margin-bottom: 5%;
+    padding: 0 50px ;
 }
-
 .home-box1{
     width: 27vw;
-    height: 34vh;
-   
+    height: 100%;  
 }
-
 .home-box2{
     width: 27vw;
-    height: 34vh;
+    height: 100%;
 }
-
 .home-box3{
     width: 27vw;
-    height: 34vh;
+    height: 100%;
 }
-
 .home-boxes-parent img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    cursor: pointer;
     transition: all ease 1s;
 }
-
 .home-boxes-parent img:hover{
     filter: contrast(30%);
 }
-
 .home-box1 , .home-box2 , .home-box3{
     position: relative;
     font-size: 20px;
 }
-
-#l-1{
+#l-1 a , #l-2 a, #l-3 a{
     position: absolute;
-    left: 31%;
-    background-color: white;
-    padding: 12px 40px;
     top: 50%;
-    
+    left: 30%;
+    background-color: white;
+    padding: 15px;
+    width: 12vw;
+    text-align: center;
+    border-radius: 8px;
+    z-index: 1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
-
-#l-2{
-    position: absolute;
-    left: 31%;
-    background-color: white;
-    padding: 12px 35px;
-    top: 50%;
+#l-1 a:hover{
+    background-color: red;
+    color: white;
 }
-
-#l-3{
-    position: absolute;
-    left: 37%;
-    background-color: white;
-    padding: 12px 40px;
-    top: 50%;
-} */
+#l-2 a:hover{
+    background-color: red;
+    color: white;
+}
+#l-3 a:hover{
+    background-color: red;
+    color: white;
+}
 
 /* boxes responsive  */
+
+@media only screen and (max-width: 992px){
+    .home-box1 , .home-box2 , .home-box3{
+        height: 100%;
+    }
+    #l-1 a , #l-2 a, #l-3 a{
+        font-size: 1rem;
+        padding: 10px;
+    }   
+}
+@media only screen and (max-width: 700px){
+    .home-boxes-parent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-box1 , .home-box2 , .home-box3{
+        width: 100%;
+    }
+    #l-1 a , #l-2 a, #l-3 a{
+        left: 35%;
+        padding: 15px;
+        width: 28vw;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
+@media only screen and (max-width: 400px){
+    #l-1 a , #l-2 a, #l-3 a{
+        padding: 10px;
+        left: 32%;
+        font-size: 1rem;
+    }
+}
+
