@@ -16,3 +16,9 @@ close_icon.addEventListener('click',function(){
     overlay_container.style.visibility = 'hidden';
     searchBtn.style.display = 'none';
 })
+
+// search-overlay-scrollbar-hide 
+
+let search_overlay = document.querySelector(".search-overlay");
+
+    search_overlay.style.overflow = 'hidden';

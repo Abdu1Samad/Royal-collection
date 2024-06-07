@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 body{
-   background:whitesmoke !important;
-
+   background:rgb(235, 234, 234) !important;
 }
 nav {
     display: flex;
@@ -17,28 +16,23 @@ nav {
     position: absolute;
     z-index: 100;
 }
-
 .navigation {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
 nav .logo a {
     text-decoration: none;
     font-size: 1.5rem;
     color: black;
     font-weight: 700;
 }
-
 nav .logo a span {
     width: 0.5rem;
     height: 0.5rem;
     background-color: red;
     display: inline-block;
 }
-
 nav ul {
     display: flex;
     gap: 4vw;
@@ -47,22 +41,18 @@ nav ul {
     padding: 0;
     font-weight: 600;
 }
-
 nav ul li {
     list-style: none;
 }
-
 nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
     font-weight: 600;
 }
-
 nav ul li a:hover{
     color: red;
 }
-
 .nav-icons {
     display: flex;
     gap: 1vw;
@@ -70,11 +60,15 @@ nav ul li a:hover{
     cursor: pointer;
     color: black;
 }
-
-.nav-icons:hover{
+.nav-icon-1:hover{
     color: red;
 }
-
+.nav-icon-2:hover{
+    color: red;
+}
+.nav-icon-3:hover{
+    color: red;
+}
 .menu {
     display: none;
     color:black;
@@ -87,7 +81,6 @@ nav ul li a:hover{
         gap: 3vw;
     }
 }
-
 @media(max-width:768px) {
 
     .menu {
@@ -138,7 +131,7 @@ nav ul li a:hover{
 .search-overlay {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 120;
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -149,20 +142,18 @@ nav ul li a:hover{
     justify-content: center;
     align-items: center;
     visibility: hidden;
+    overflow:hidden;
 }
-
 .overlay-font {
     position: absolute;
     right: 50px;
     top: 20px;
     cursor: pointer;
 }
-
 .overlay-font i {
     color: white;
     font-size: 40px;
 }
-
 .overlay-items {
     display: flex;
     justify-content: center;
@@ -172,14 +163,12 @@ nav ul li a:hover{
     flex-direction: column;
     margin-top: 10vh;
 }
-
 .overlay-label label{
     font-family: "Poppins",sans-serif;
     font-size: 3.5rem;
     color: white;
     font-weight: 500;
 }
-
 .overlay-searchbox input{
     width: 80vw;
     height: 8vh;
@@ -190,11 +179,9 @@ nav ul li a:hover{
     padding: 0 30px;
     margin-top:8vh ;
 }
-
 .overlay-btn{
     margin-top: 8vh;
 }
-
 .overlay-btn input{
     width: 15vw;
     height: 9vh;
@@ -206,13 +193,11 @@ nav ul li a:hover{
     outline: none;
     transition: all ease 0.5s;
 }
-
 .overlay-btn input:hover{
     background-color: red;
     color: white;
     transform: translateY(-10px);
 }
-
 
 /* Search overlay Responsive */
 
@@ -225,64 +210,38 @@ nav ul li a:hover{
         width: 18vw;
     }
 }
-
 @media (max-width:768px){
     .overlay-btn input{
         width: 20vw;
     }
-
 }
-
 @media (max-width:700px){
     .overlay-label label{
         font-size: 6vw;
     }
-
     .overlay-font{
         right: 25px;
     }
-
     .overlay-font i{
         font-size: 30px;
     }
-
     .overlay-btn input{
         width: 25vw;
     }
 }
-
 @media (max-width:500px){
     .overlay-btn input{
         width: 28vw;
     }
 }
-
 @media (max-width:400px){
     .overlay-btn input{
         width: 30vw;
     }
-
     .overlay-searchbox input{
         font-size: 16px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Carousel */
 
@@ -290,9 +249,9 @@ nav ul li a:hover{
     position: relative;
 }
 .carousel-item {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://demo.fieldthemes.com/loki/home2/modules/fieldslideshow/images/slider3-774.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("https://t4.ftcdn.net/jpg/02/44/59/75/360_F_244597556_sWPj5Gf4wDUm7Zy8DhXGO0JrduwsxLGf.webp");
     height: 600px;
-    background-position:center;
+    background-position:top;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -300,7 +259,7 @@ nav ul li a:hover{
     align-items: center;
 }
 .carousel-1-items{
-    color: white;
+    color: color;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -313,36 +272,41 @@ nav ul li a:hover{
 }
 .carousel-1-label-1 label{
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 900;
+    color: black;
 }
 .carousel-label-2 label{
     font-size: 4rem;
     text-align: center;
-    line-height: 13vh;
+    line-height: 12vh;
+    font-weight: 700;
     font-family: "Poppins",sans-serif;
+    color: black;
 }
 .carousel-1-label-3 label{
     font-family:"Poppins",sans-serif;
     font-size: 1.9rem;
-    line-height: 12vh;
+    line-height: 8vh;
+    font-weight: 600;
+    color: black;
 }
 .carousel-1-label-3 label span{
     color: red;
     font-weight: 600;
 }
 .carousel-1-btn input{
-    width: 12vw;
+    width:10rem;
     height: 9vh;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     border: none;
     outline:none ;
     transition: all ease 0.3s;
     margin-top: 2vh;
     border-radius: 4px;
     background-color: transparent;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid black;
+    color: black;
 }
 .carousel-1-btn input:hover{
     background-color:red;
@@ -350,9 +314,7 @@ nav ul li a:hover{
     transform: translateY(-10px);
     border: none;
 }
-.dark-carousel:active .navigation ul li a{
-    color: white;
-}
+
 
 @media only screen and (max-width: 1300px){
 
@@ -363,7 +325,7 @@ nav ul li a:hover{
         line-height: 80px;
     }
     .carousel-1-btn input{
-        height: 6vh;
+        height: 8vh;
     }
 }
 
@@ -374,9 +336,6 @@ nav ul li a:hover{
     }
     .carousel-1-label-3 label{
         line-height: 35px;
-    }
-    .carousel-1-btn input{
-        width: 15vw;
     }
 }
 
@@ -748,3 +707,276 @@ nav ul li a:hover{
     }
 }
 
+/* casual-products */
+
+.casual-container{
+    background-image:url("images/bg_processed.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    position: relative;
+    padding: 50px;
+}
+.casual-products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxes-aliment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    left: 20px;
+}
+.casual-box-1{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("https://media.istockphoto.com/id/615595706/photo/fashion-portrait-pretty-sweet-woman-blowing-red-lips-black-hat.jpg?s=612x612&w=0&k=20&c=k_IlfTDM_E7lajbdZ_f8_mpiMcVwrBST_dntHpki7AQ=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    width: 53vw;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.casual-box-2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("https://www.campusshoes.com/cdn/shop/files/RAFE_22G-1118_R.SLATE-NAVY_2.jpg?v=1705404549");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45vh;
+    width: 37vw;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.casual-box-3{
+    background-image: linear-gradient(to left ,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("https://media.istockphoto.com/id/973481674/photo/stylish-man-posing-on-grey-background.jpg?s=612x612&w=0&k=20&c=zn4YXiU1RX4-DHz8XNSSB3PoEKBxpfeFtRTESWX6OWQ=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45vh;
+    width: 37vw;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.casual-item-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: white;
+    margin-top: 100px;
+}
+.casual-item-1 label{
+    font-size: 5rem;
+    font-weight: 600;
+}
+.casual-item-1 p{
+    line-height: 40px;
+    font-size: 1.2rem;
+}
+.casual-item-1 a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    height: 40px;
+    width: 150px;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    transition: all ease 0.6s;
+    margin-top: 20px;
+    opacity: 0;
+}
+.casual-item-1 a:hover{
+    color: black;
+    background-color: white;
+}
+.casual-box-1:hover a{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+.casual-item-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    flex-direction: column;
+    color: white;
+}
+.casual-item-2 label{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.casual-item-2 p{
+    line-height: 40px;
+    font-size: 1.1rem;
+    font-weight: 600px;
+}
+.casual-item-2 a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    height: 40px;
+    width: 150px;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    transition: all ease 0.6s;
+    margin-top: 20px;
+    opacity: 0;
+}
+.casual-item-2 a:hover{
+    color: black;
+    background-color: white;
+}
+.casual-box-2:hover a{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+.casual-item-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    flex-direction: column;
+    color: white;
+    margin-top: 100px;
+}
+.casual-item-3 label{
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+.casual-item-3 p{
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.casual-item-3 .btn a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 5px;
+    width: 150px;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.casual-box-3 a:hover{
+    color: black;
+    background-color: white;
+}
+.casual-box-3:hover a{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+/* Casual-session-responsive  */
+
+@media only screen and (max-width: 992px){
+
+    .casual-item-1 label{
+        font-size: 3.9rem;
+        font-weight: 600;
+    }
+    .casual-item-1 p{
+        line-height: 40px;
+        font-size: 1rem;
+    }    
+    .casual-item-2 label{
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+    .casual-item-2 p{
+        line-height: 30px;
+        font-size: 1rem;
+        font-weight: 600px;
+        text-align: center;
+    }
+    .casual-item-3 label{
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    .casual-item-3 p{
+        line-height: 30px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: center;
+    }    
+}
+
+@media only screen and (max-width: 768px){
+
+    .casual-item-1 label{
+        font-size: 3.1rem;
+        font-weight: 600;
+    }
+    .casual-item-1 p{
+        line-height: 30px;
+        font-size: 1rem;
+        text-align: center;
+    }    
+    .casual-item-1 a{
+        height: 40px;
+        width: 130px;
+    }
+    .casual-item-2 label{
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    .casual-item-2 p{
+        line-height: 30px;
+        font-size: 1rem;
+        font-weight: 600px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .casual-item-2 a{
+        height: 40px;
+        width: 130px;
+    }
+    .casual-item-3 label{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .casual-item-3 p{
+        line-height: 30px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .casual-item-3 .btn a{
+        width: 130px;
+        margin-top: 10px;
+    }    
+    .casual-item-3{
+        height: 15vh;
+    }
+}
+
+@media only screen and (max-width: 600px){
+
+    
+}
