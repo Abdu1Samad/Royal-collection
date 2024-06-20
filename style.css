@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
      /* background:rgb(235, 234, 234) !important; */
-     /* overflow: hidden; */
+     overflow-x: hidden;
 }
 nav {
     display: flex;
@@ -1012,20 +1013,23 @@ nav ul li a:hover{
     .Marquee-images{
         display: flex;
         height: 50vh;
-        gap: 10px;
+        /* gap: 10px; */
         animation: marquee 20s infinite linear; 
     }
     .Marquee-images img{
-        border: 6px solid #c5c1c1;
-        height: 40vh;
-        border-radius: 25px;
+        /* border: 6px solid #c5c1c1; */
+        border: 2px solid black;
+        /* border-top: 10px solid black; */
+        /* border-bottom: 10px solid black; */
+        height: 80%;
+        /* border-radius: 25px; */
         width: 170px;
-        transition: all ease 1s;
+        transition: all 0.5s ease-in-out;
         object-fit: cover;
     }
-    .Marquee-images #m-img img:hover{
-        transform: scale(1.1);
-        overflow: hidden;
+    .Marquee-images img:hover{
+        transform: scale(1.2);
+        /* overflow: hidden; */
         cursor: pointer;
     }
     @keyframes marquee{
