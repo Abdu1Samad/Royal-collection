@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: "Poppins",sans-serif;
 }
 body{
      /* background:rgb(235, 234, 234) !important; */
@@ -1003,28 +1004,33 @@ nav ul li a:hover{
 
 /* Marquee-session */
 
+    .marquee-heading{
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
+    .marquee-heading h3{
+        font-size: 4vw;
+        font-family: "Poppins",sans-serif;
+    }
     .Marquee-container{
         /* background-color: black; */
         width: 100%;
-        margin-top: 10%;
+        margin-top: 5%;
         margin-bottom: 5%;
         overflow: hidden;
+        /* display: inline-block; */
     }
     .Marquee-images{
         display: flex;
-        height: 50vh;
-        /* gap: 10px; */
+        height: auto;
         animation: marquee 20s infinite linear; 
     }
     .Marquee-images img{
-        /* border: 6px solid #c5c1c1; */
         border: 2px solid black;
-        /* border-top: 10px solid black; */
-        /* border-bottom: 10px solid black; */
-        height: 80%;
-        /* border-radius: 25px; */
-        width: 170px;
-        transition: all 0.5s ease-in-out;
+        height: 300px;
+        width: 200px;
+        transition: all 0.8s ease-in-out;
         object-fit: cover;
     }
     .Marquee-images img:hover{
@@ -1041,7 +1047,202 @@ nav ul li a:hover{
         }
     }
 
+    /* Marquee Responsive  */
+
+    @media only screen and (max-width: 768px){
+
+        .marquee-heading h3{
+            font-size: 6vw;
+        }
+            
+    }    
+
+    @media only screen and (max-width: 400px){
+
+        .marquee-heading h3{
+            font-size: 8vw;
+        }
+
+    }
+
+    @media only screen and (max-width: 600px){
+
+        .Marquee-images img{
+            width: 180px;
+        }
+
+    }
+
+    @media only screen and (max-width: 400px){
+
+        .Marquee-images img{
+            width: 160px;
+        }
+
+    }
 
 
 
 
+
+
+
+    /* footer  */
+
+    .footer-container{
+        width: 100%;
+        background-color: black;
+        height: 600px;
+        margin-top: 10%;
+        color: white;
+    }
+    .footer-heading{
+        display: flex;
+        justify-content: center;
+        padding-top: 3%;
+    }
+    .footer-heading h5{
+        color: white;
+        font-size: 40px;
+        color: aqua;
+    }
+    .footer-content{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 50px;
+        padding-top: 5%;
+    }
+    .sub-content-1{
+        width: 300px;
+    }
+    .sub-content-1 h6{
+        font-size: 20px;
+        color: aqua;
+    }
+    .sub-content-1 ul{
+        margin-top: 10%;
+        line-height: 35px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-content-1 ul li{
+        list-style:none;
+        display: inline;
+        position: relative;
+        left: 8px;
+    }
+    .sub-content-1 a{
+        text-decoration: none;
+        color: white;
+    }
+    .sub-content-1 a:hover{
+        color: aqua;
+    }
+    .fa-solid{
+        color: aqua;
+    }
+    .sub-content-2{
+        width: 300px;
+    }
+    .sub-content-2 h6{
+        font-size: 20px;
+        color: aqua;
+    }
+    .sub-content-2 ul{
+        margin-top: 10%;
+        line-height: 35px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-content-2 ul li{
+        list-style:none;
+        display: inline;
+        position: relative;
+        left: 8px;
+    }
+    .sub-content-2 a{
+        text-decoration: none;
+        color: white;
+    }
+    .sub-content-2 a:hover{
+        color: aqua;
+    }
+    .fa-solid{
+        color: aqua;
+    }
+    .sub-content-3{
+        width: 300px;
+    }
+    .sub-content-3 h6{
+        font-size: 20px;
+        color: aqua;
+    }
+    .sub-content-3 ul{
+        margin-top: 10%;
+        line-height: 35px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-content-3 ul li{
+        list-style:none;
+        display: inline;
+        position: relative;
+        left: 8px;
+    }
+    .sub-content-3 a{
+        text-decoration: none;
+        color: white;
+    }
+    .sub-content-3 a:hover{
+        color: aqua;
+    }
+    .fa-solid{
+        color: aqua;
+    }    
+    .sub-content-4 h6{
+        font-size: 20px;
+        color: aqua;
+    }   
+    .sub-content-4 p{
+        padding-top: 10%;
+    } 
+    .sub-content-4 p:hover{
+        color: aqua;
+    }
+    .sub-content-4 input{
+        width: 15vw;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid aqua;
+        padding-top: 20px;
+        padding-left: 5px;
+        font-size: 15px;
+        padding-bottom: 10px;
+        color: white;
+    }
+    .sub-content-4 a{
+        text-decoration: none;
+        color: black;
+        background-color:aqua;
+        padding: 10px 15px;
+        position: relative;
+        top: 5px;
+        right: 5px;
+        font-weight: 500;
+    }
+    .sub-content-4 a:hover{
+        color: black;
+        background-color: white;
+    }
+    .footer-line{
+        display: flex;
+        justify-content: center;
+        color: white;
+        width: 80%;
+        height: 2px;
+        background-color: aqua;
+    }
